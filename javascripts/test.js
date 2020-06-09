@@ -3,7 +3,7 @@ function showMap(geoJson, diff)
 	var map = L.map('map').setView([50.4403, 30.5010], 10);
 	map.addControl(new L.Control.Permalink());
 	
-	L.tileLayer('https://https://tile.i.ua/{z}/{x}/{y}.png', {
+	L.tileLayer('https://tile.i.ua/{z}/{x}/{y}.png', {
 		minZoom: 10,
 		maxZoom: 17,
 		attribution: '&copy; <a href="https://openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
