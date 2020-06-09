@@ -1,17 +1,17 @@
 function showMap(geoJson, diff)
 {
-	var map = L.map('map').setView([49, 31], 6);
+	var map = L.map('map').setView([50.4403, 30.5010], 10);
 	map.addControl(new L.Control.Permalink());
 	
 	L.tileLayer('https://tiles.easyway.info/{z}/{x}/{y}.png', {
-		maxZoom: 19,
+		maxZoom: 17,
 		attribution: '&copy; <a href="https://openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
 	if (geoJson.indexOf("railway.dead.ends") > 0)
 	{
 		L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png', {
-			maxZoom: 19,
+			maxZoom: 17,
 			attribution: '<a href="http://www.openrailwaymap.org/" target="_blank">OpenRailwayMap</a>'
 		}).addTo(map);
 	}
